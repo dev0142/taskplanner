@@ -1,0 +1,13 @@
+*:focus {
+    outline: none !important;
+    
+}
+.MuiCardHeader-title{
+    
+}
+.MuiCardHeader-avatar{
+   margin: 0px !important;
+}
+.MuiCardHeader-content {
+  
+}

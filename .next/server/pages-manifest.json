@@ -1,0 +1,13 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/employees": "pages/employees.js",
+  "/api/task": "pages/api/task.js",
+  "/": "pages/index.js",
+  "/task": "pages/task.js",
+  "/api/[task_id]": "pages/api/[task_id].js",
+  "/api/comments": "pages/api/comments.js",
+  "/task/[task_id]": "pages/task/[task_id].js",
+  "/api/employee": "pages/api/employee.js"
+}
