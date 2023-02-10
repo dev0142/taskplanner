@@ -75,7 +75,7 @@ export default function Employees(props) {
 
   const handleDeleteEmployee = async (e, id) => {
     e.preventDefault();
-    let res = await fetch("http://localhost:3000/api/employee", {
+    let res = await fetch(`${process.env.NEXT_PUBLIC_host}`+"/api/employee", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(id),
@@ -176,7 +176,7 @@ export default function Employees(props) {
 }
 
 export async function getServerSideProps(context) {
-  let res = await fetch("http://localhost:3000/api/employee", {
+  let res = await fetch(`${process.env.NEXT_PUBLIC_host}`+"/api/employee", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

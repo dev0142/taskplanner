@@ -167,7 +167,7 @@ export default function CreateTask(props) {
 }
 
 export async function getServerSideProps(context) {
-  let res = await fetch("http://localhost:3000/api/employee", {
+  let res = await fetch(`${process.env.NEXT_PUBLIC_host}`+"/api/employee", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

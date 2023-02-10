@@ -363,13 +363,13 @@ export async function getServerSideProps(context) {
   const id = context.params.task_id;
 
   const [specificTaskRes, commentDataRes] = await Promise.all([
-    fetch("http://localhost:3000/api/" + `${id}`, {
+    fetch(`${process.env.NEXT_PUBLIC_host}`+"/api/" + `${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
     }),
-    fetch("http://localhost:3000/api/comments?task=" + `${id}`, {
+    fetch(`${process.env.NEXT_PUBLIC_host}`+"/api/comments?task=" + `${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

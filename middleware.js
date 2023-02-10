@@ -7,6 +7,6 @@ export default function middleware(req) {
   let url = req.url;
   let result = url.match(invalidPathRegexForEmployees);
   if (result && employeeVerification) {
-    return NextResponse.redirect("http://localhost:3000/user/task");
+    return NextResponse.redirect(`${process.env.NEXT_PUBLIC_host}`+"/user/task");
   }
 }
