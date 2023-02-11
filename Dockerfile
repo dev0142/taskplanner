@@ -1,8 +1,7 @@
-FROM node:12.2.0-alpine
+FROM node:19.6.0-alpine
 WORKDIR app
 COPY . .
-RUN npm install --global yarn
 RUN yarn install
 # RUN npm run test
-EXPOSE 8001
+EXPOSE 3000
 CMD ["yarn","run","dev"]
