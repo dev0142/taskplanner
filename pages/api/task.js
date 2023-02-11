@@ -30,7 +30,7 @@ export default async (req, res) => {
           console.log(employee._id)
           const allAssignedTasks = await db
             .collection("MorningStarTask")
-            .find({"assignee": employee._id.valueOf() })
+            .find({"assignee": employee._id })
             .toArray();
           console.log(allAssignedTasks);
           res.status(200).send({
