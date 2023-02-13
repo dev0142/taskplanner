@@ -106,7 +106,7 @@ export default function Employees(props) {
         {props && props.allEmployees
           ? props.allEmployees.map((item, index) => {
               return (
-                <Card
+                <Card key={index}
                   sx={{ width: {xs:"100%",sm:"320px"}, margin: "10px", borderRadius: "10px" }}
                 >
                   <CardHeader

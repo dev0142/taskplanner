@@ -79,7 +79,7 @@ export default function Task() {
           {userTasks &&
             userTasks.map((item, index) => {
               return (
-                <Card
+                <Card key={index}
                   sx={{ width: "333px", margin: "10px", borderRadius: "10px" }}
                 >
                   <div

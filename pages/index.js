@@ -8,10 +8,6 @@ import Sidebar from '../components/Sidebar'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const[file,setFile]=useState();
-  const handleFile=(e)=>{
-    setFile(e.target.files[0]);
-  }
   return (
     <div>
       

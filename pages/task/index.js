@@ -27,7 +27,6 @@ import CardActionArea from "@mui/material/CardActionArea";
 import taskProgressSvg from "../../images/TaskProgress.svg";
 
 export default function Task(props) {
-  if (props.error) return <>Network error</>;
   const router = useRouter();
   const refreshData = () => {
     router.reload(true);
@@ -98,7 +97,7 @@ export default function Task(props) {
               //   }, 1000);
               // }, []);
               return (
-                <Card
+                <Card key={index}
                   sx={{ width: {xs:"100%",sm:"333px"}, margin: "10px", borderRadius: "10px" }}
                 >
                   <div
